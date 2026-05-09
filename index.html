@@ -825,8 +825,141 @@ window.MathJax = {
     50% { opacity: 1; }
   }
 
-  /* RESPONSIVE */
-  @media (max-width: 820px) {
+  /* AUTHORS SECTION */
+  .authors {
+    margin: 60px 0 20px;
+    padding: 44px 40px 40px;
+    background: linear-gradient(135deg, var(--paper-soft) 0%, var(--paper-dark) 100%);
+    border: 2px solid var(--ink);
+    border-radius: 16px;
+    box-shadow: 6px 6px 0 var(--ink), 6px 6px 20px var(--shadow);
+    position: relative;
+  }
+
+  .authors::before {
+    content: '✦ АВТОРСКИ ЕКИП ✦';
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--ink-deep);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    padding: 6px 20px;
+    border-radius: 6px;
+    box-shadow: 0 3px 0 var(--gold-deep);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .authors-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 8px;
+  }
+
+  .author-card {
+    background: white;
+    border: 2px solid var(--ink);
+    border-radius: 12px;
+    padding: 28px 26px;
+    box-shadow: 5px 5px 0 var(--ink);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .author-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0 var(--ink);
+  }
+
+  .author-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 0 0 0 60px;
+    opacity: 0.15;
+  }
+
+  .author-card.author-1::after { background: var(--accent); }
+  .author-card.author-2::after { background: var(--blue); }
+
+  .author-role {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 12px;
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+
+  .author-card.author-1 .author-role {
+    background: var(--accent);
+    color: var(--paper-soft);
+    box-shadow: 0 2px 0 var(--accent-deep);
+  }
+
+  .author-card.author-2 .author-role {
+    background: var(--blue);
+    color: var(--paper-soft);
+    box-shadow: 0 2px 0 var(--blue-deep);
+  }
+
+  .author-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--ink-deep);
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+  }
+
+  .author-title-text {
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+    color: var(--accent-deep);
+    margin-bottom: 14px;
+    line-height: 1.2;
+  }
+
+  .author-card.author-2 .author-title-text {
+    color: var(--blue-deep);
+  }
+
+  .author-desc {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  .authors-footer {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--ink-soft);
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 720px) {
+    .authors { padding: 36px 22px 28px; }
+    .authors-grid { grid-template-columns: 1fr; gap: 20px; }
+    .author-card { padding: 22px 20px; }
+    .author-name { font-size: 22px; }
+  }
+
     .hero-content { grid-template-columns: 1fr; gap: 32px; }
     .hero-illustration { max-width: 320px; margin: 0 auto; }
   }
@@ -964,6 +1097,22 @@ window.MathJax = {
           <circle cx="240" cy="320" r="4" fill="#7a5b9c"/>
         </svg>
       </div>
+    </div>
+    <div class="authors">
+      <div class="authors-grid">
+        <div class="author-card author-1">
+          <span class="author-role">Автор · Идея</span>
+          <div class="author-name">Валя Витковска</div>
+          <div class="author-title-text">педагогически замисъл<br>и съдържание</div>
+        </div>
+
+        <div class="author-card author-2">
+          <span class="author-role">Реализация</span>
+          <div class="author-name">Claude</div>
+          <div class="author-title-text">техническо изпълнение</div>
+        </div>
+      </div>
+      <div class="authors-footer">~ от любов към математиката ~</div>
     </div>
   </div>
 </header>
