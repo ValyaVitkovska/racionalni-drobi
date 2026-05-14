@@ -1167,7 +1167,7 @@ window.MathJax = {
     <h3>Примери за рационални дроби</h3>
     <div class="example">
       <div class="example-label">Примери</div>
-      <p>$\dfrac{x+1}{x-3}$ &nbsp;·&nbsp; $\dfrac{x^2 - 4}{2x + 6}$ &nbsp;·&nbsp; $\dfrac{5}{x-1}$ &nbsp;·&nbsp; $\dfrac{a^2 + 2ab + b^2}{a-b}$</p>
+      <p>$\dfrac{x+1}{x-3}$ ,&nbsp; $\dfrac{x^2 - 4}{2x + 6}$ ,&nbsp; $\dfrac{5}{x-1}$ ,&nbsp; $\dfrac{a^2 + 2ab + b^2}{a-b}$</p>
     </div>
 
     <h3>Не са рационални дроби</h3>
@@ -1354,21 +1354,55 @@ window.MathJax = {
       </div>
     </div>
 
-    <h3>③ Събиране и изваждане с еднакви знаменатели</h3>
+    <h3>③ Степенуване на рационална дроб</h3>
+    <p>За да повдигнем рационална дроб на степен с естествен показател, повдигаме на тази степен <strong>числителя и знаменателя</strong> поотделно:</p>
+    <div class="math-display">
+      $$\left(\frac{A}{B}\right)^n = \frac{A^n}{B^n}$$
+    </div>
+
+    <div class="example">
+      <div class="example-label">Пример 3.1 · Просто степенуване</div>
+      <div class="math-display">
+        $$\left(\frac{x}{y}\right)^3 = \frac{x^3}{y^3}$$
+      </div>
+    </div>
+
+    <div class="example">
+      <div class="example-label">Пример 3.2 · Степенуване на дроб със събиране</div>
+      <p>Пресметни: $\left(\dfrac{x+1}{x-2}\right)^2$</p>
+      <p>Прилагаме формулата за квадрат на сбор $(a+b)^2 = a^2 + 2ab + b^2$ и квадрат на разлика $(a-b)^2 = a^2 - 2ab + b^2$:</p>
+      <div class="math-display">
+        $$\left(\frac{x+1}{x-2}\right)^2 = \frac{(x+1)^2}{(x-2)^2} = \frac{x^2+2x+1}{x^2-4x+4}$$
+      </div>
+    </div>
+
+    <div class="example">
+      <div class="example-label">Пример 3.3 · Степенуване с коефициенти</div>
+      <p>Пресметни: $\left(\dfrac{2a}{3b}\right)^2$</p>
+      <p>Степенуваме и числителя, и знаменателя:</p>
+      <div class="math-display">
+        $$\left(\frac{2a}{3b}\right)^2 = \frac{(2a)^2}{(3b)^2} = \frac{4a^2}{9b^2}$$
+      </div>
+      <p>Внимавай: $(2a)^2 = 2^2 \cdot a^2 = 4a^2$, а не $2a^2$!</p>
+    </div>
+
+    <h3>④ Събиране и изваждане на рационални дроби</h3>
+
+    <h3 style="font-size:22px;margin-top:24px;color:var(--accent-deep);">а) С еднакви знаменатели</h3>
     <p>При <strong>еднакви знаменатели</strong> просто събираме (изваждаме) числителите, а знаменателят остава същият:</p>
     <div class="math-display">
       $$\frac{A}{B} + \frac{C}{B} = \frac{A+C}{B}, \qquad \frac{A}{B} - \frac{C}{B} = \frac{A-C}{B}$$
     </div>
 
     <div class="example">
-      <div class="example-label">Пример 3.1 · Събиране</div>
+      <div class="example-label">Пример 4.1 · Събиране</div>
       <div class="math-display">
         $$\frac{2x}{x+1} + \frac{3}{x+1} = \frac{2x+3}{x+1}$$
       </div>
     </div>
 
     <div class="example">
-      <div class="example-label">Пример 3.2 · Изваждане (внимание със знаците!)</div>
+      <div class="example-label">Пример 4.2 · Изваждане (внимание със знаците!)</div>
       <p>Пресметни: $\dfrac{3x+5}{x-2} - \dfrac{x+1}{x-2}$</p>
       <p><strong>Внимание:</strong> когато изваждаме, минусът се отнася за <em>целия</em> числител на втората дроб. Поставяме скоби:</p>
       <div class="math-display">
@@ -1377,7 +1411,7 @@ window.MathJax = {
     </div>
 
     <div class="example">
-      <div class="example-label">Пример 3.3 · С последващо съкращаване</div>
+      <div class="example-label">Пример 4.3 · С последващо съкращаване</div>
       <p>Пресметни: $\dfrac{x^2}{x-1} - \dfrac{1}{x-1}$</p>
       <div class="math-display">
         $$\frac{x^2-1}{x-1} = \frac{(x-1)(x+1)}{x-1} = x+1$$
@@ -1385,7 +1419,7 @@ window.MathJax = {
       <p>Винаги проверявай дали резултатът може да се съкрати!</p>
     </div>
 
-    <h3>④ Събиране и изваждане с различни знаменатели</h3>
+    <h3 style="font-size:22px;margin-top:36px;color:var(--accent-deep);">б) С различни знаменатели</h3>
     <p>Привеждаме дробите до <strong>общ знаменател</strong> (намираме НОК на знаменателите) и тогава прилагаме правилото за еднакви знаменатели.</p>
 
     <div class="definition">
@@ -1398,7 +1432,7 @@ window.MathJax = {
     </div>
 
     <div class="example">
-      <div class="example-label">Пример 4.1 · Прости знаменатели</div>
+      <div class="example-label">Пример 4.4 · Прости знаменатели</div>
       <p>Пресметни: $\dfrac{2}{x} + \dfrac{3}{x+1}$</p>
       <p><strong>Общ знаменател:</strong> $x(x+1)$</p>
       <div class="math-display">
@@ -1407,7 +1441,7 @@ window.MathJax = {
     </div>
 
     <div class="example">
-      <div class="example-label">Пример 4.2 · С число</div>
+      <div class="example-label">Пример 4.5 · С число</div>
       <p>Пресметни: $\dfrac{1}{x-1} + 2$</p>
       <p>Записваме $2$ като дроб със същия знаменател:</p>
       <div class="math-display">
@@ -1416,7 +1450,7 @@ window.MathJax = {
     </div>
 
     <div class="example">
-      <div class="example-label">Пример 4.3 · С разлагане</div>
+      <div class="example-label">Пример 4.6 · С разлагане</div>
       <p>Пресметни: $\dfrac{1}{x-2} - \dfrac{1}{x+2}$</p>
       <p><strong>Общ знаменател:</strong> $(x-2)(x+2) = x^2 - 4$</p>
       <div class="math-display">
@@ -1425,7 +1459,7 @@ window.MathJax = {
     </div>
 
     <div class="example">
-      <div class="example-label">Пример 4.4 · По-сложен</div>
+      <div class="example-label">Пример 4.7 · По-сложен</div>
       <p>Пресметни: $\dfrac{x}{x-3} + \dfrac{6}{x^2 - 9}$</p>
       <p><strong>Разлагаме:</strong> $x^2 - 9 = (x-3)(x+3)$, така че общият знаменател е $(x-3)(x+3)$.</p>
       <div class="math-display">
@@ -1434,7 +1468,7 @@ window.MathJax = {
     </div>
 
     <div class="example">
-      <div class="example-label">Пример 4.5 · Изваждане с разлагане</div>
+      <div class="example-label">Пример 4.8 · Изваждане с разлагане</div>
       <p>Пресметни: $\dfrac{2}{x+1} - \dfrac{2}{x^2 + x}$</p>
       <p><strong>Разлагаме:</strong> $x^2 + x = x(x+1)$. Общ знаменател: $x(x+1)$.</p>
       <div class="math-display">
